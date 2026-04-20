@@ -756,7 +756,132 @@
     border-top: 1px solid var(--rose-pale);
     padding-top: 1.5rem;
   }
+/* ─── TESTIMONIALS ─── */
+  .testimonials-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 
+  .testimonials-intro h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonials-intro p {
+    color: var(--ink-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .testimonial-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
+  .testimonial {
+    background: white;
+    padding: 2.5rem 2.5rem 2rem;
+    position: relative;
+    border: 1px solid var(--rose-pale);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease;
+  }
+
+  .testimonial.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .testimonial::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    font-weight: 300;
+    color: var(--rose-light);
+    line-height: 1;
+    opacity: 0.45;
+  }
+
+  .testimonial-body {
+    font-size: 0.92rem;
+    line-height: 1.95;
+    color: var(--ink-light);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+  }
+
+  .testimonial-body p {
+    margin-bottom: 0.9rem;
+  }
+
+  .testimonial-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .testimonial-body strong {
+    color: var(--rose);
+    font-weight: 600;
+    background: linear-gradient(transparent 65%, var(--rose-pale) 65%);
+    padding: 0 2px;
+  }
+
+  .testimonial-footer {
+    border-top: 1px solid var(--rose-pale);
+    padding-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rose-pale), var(--gold-pale));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--rose);
+    flex-shrink: 0;
+  }
+
+  .testimonial-meta {
+    flex: 1;
+  }
+
+  .testimonial-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+  }
+
+  .testimonial-role {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    color: var(--rose);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
   /* ─── PRICING ─── */
   .pricing-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px;
@@ -771,7 +896,7 @@
     background: white;
     padding: 3rem 2.5rem;
     text-align: center;
-    position: relative;
+    position: relative;<!-- ─── PRICING ─── -->
     transition: all 0.3s ease;
   }
 
@@ -1394,7 +1519,84 @@
     </div>
   </div>
 </section>
+<!-- ─── TESTIMONIALS ─── -->
+<section class="section section--tinted">
+  <div class="container">
+    <div class="testimonials-intro">
+      <span class="section-eyebrow">第0屆學員真實回饋</span>
+      <h2 class="reveal">她們走過了這100天</h2>
+      <p class="reveal">— 這是她們想告訴你的 —</p>
+    </div>
 
+    <div class="testimonial-grid">
+
+      <!-- 見證 1 -->
+      <div class="testimonial reveal">
+        <div class="testimonial-body">
+          <p>謝謝Tiffany用心的組成陪跑第0屆，也好感謝促成這幾個月每個大小任務、會議、佈達的助理Connie、Nikki及川普。</p>
+          <p>大概忘不了在人生最無助的時候滑到女性陪跑報名貼文，那種既興奮又懷疑的心情，<strong>加入社群後無論是每日分享、會議的發言，總周全隱私問題及身份的理解</strong>，讓人能在這個小空間裡更肆意的把自己的困境及想法分享出來。</p>
+          <p>同時也能意外的在Tiffany分享的語音裡找到錦囊。這份心意可以陪伴我們走很久很久的底氣，我這支績優股要準備要暴漲了 🚀</p>
+        </div>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">L</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">L 同學</div>
+            <div class="testimonial-role">第 0 屆學員</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 見證 2 -->
+      <div class="testimonial reveal">
+        <div class="testimonial-body">
+          <p>真的非常榮幸跟開心可以成為Tiffany第0屆陪跑計畫的學員😍。我是全職媽媽，小孩現在5歲上中班，前幾年的育兒階段忙碌、辛苦卻也甜蜜。小孩上幼稚園之後，白天我自由的時間更多了，也開始想要有一些屬於自己的成就感和舞台。</p>
+          <p>老實說，我剛開始看到課程計劃與目標的時候，還有點懷疑想說這麼有深度跟廣度的內容，真的有辦法在百日內完成嗎？結果實際參加完後，<strong>我深深覺得這套陪跑計畫的價值遠遠超過它的價格</strong>！單是整理個人的財務報表以及尋找Ikigai的四圈交集，光是想像就覺得工程浩大。</p>
+          <p>對我影響最深的就是找到Ikigai的四圈交集，要不是有Tiffany老師的陪伴和督促，搭配BMC個人商業模式的思考架構，我可能真的都還是處在找不出人生方向的混亂狀態！現在的我，除了找到未來想努力的目標之外，心態也變得更加穩定不焦慮。</p>
+        </div>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">M</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">M 同學</div>
+            <div class="testimonial-role">全職媽媽</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 見證 3 -->
+      <div class="testimonial reveal">
+        <div class="testimonial-body">
+          <p>2025年末很幸運備取上Tiffany第0屆媽媽陪跑計畫。自從有小孩後，我放下了很多課程，商業課程多數是先生推著我上。</p>
+          <p>難得這次的陪跑計畫，是我自己有興趣的。陪跑正式開始前的練習，就讓我思考很多。<strong>Tiffany 讓我學習「為自己」思考</strong>——媽媽、太太、媳婦、女兒、老闆等身分切換，每個角色都有自己的價值主張 😆</p>
+          <p>媽媽想要孩子有財商觀念，最好爸媽財商觀念也能跟上時代，親子一起成長。第0屆的媽媽盟友各有專長，我們都有一顆善良願意幫助人的心，每次線上討論分享，都是充電時間。很喜歡聽 Tiffany 每天的知識分享，大推 Tiffany 財商給未來的主人翁，<strong>財商不是只有理財思維，經營自己也是需要從小培養 💪</strong></p>
+        </div>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">Y</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Y 同學</div>
+            <div class="testimonial-role">媽媽盟友</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 見證 4 -->
+      <div class="testimonial reveal">
+        <div class="testimonial-body">
+          <p>在疫情前，我一直很羨慕住台灣的朋友有各種烘培實體課可以上。疫情期間，開始出現各種線上課，我很開心的陸陸續續買線上課，但是，大部分只看了一部份，沒有全部都看完。<strong>事實是，沒有看完，沒有實際操作，根本沒用啊！</strong></p>
+          <p>去年底，我看到Tiffany老師的女性投資自己百日陪跑計劃內容很喜歡，就報名參加。這個跟平常的線上課程不一樣，每天都有老師不同主題的語音陪跑，可以重複播放，比較忙時，甚至可以邊做家事邊聽，神奇的是，我幾乎每天都有聽，<strong>每天都進步一點點</strong>。</p>
+          <p>老師語音陪跑裡的一段話我很喜歡——複利效應不止用在投資，它可以用在人生的方方面面，每做一件事情，都是在投資我的未來。老師教我們如何盤點時間、金錢，讓我看清楚每天時間、金錢都花哪裡去了。在這裡，妳不孤單，有老師、助教們、夥伴們一起為你加油打氣、一起想辦法、一起往前走。</p>
+        </div>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">C</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">C 同學</div>
+            <div class="testimonial-role">海外學員</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <!-- ─── PRICING ─── -->
 <section class="section section--cream">
   <div class="container">
