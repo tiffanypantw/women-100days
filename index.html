@@ -1088,35 +1088,79 @@
     margin-right: 0.3rem;
     letter-spacing: 0.1em;
   }
+.value-reveal {
+    text-align: center;
+    padding: 2.5rem 0 1rem;
+  }
 
+  .value-reveal-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
   .value-bridge {
     text-align: center;
     margin-top: 3rem;
-    padding: 2rem;
+    padding: 3.5rem 2rem;
     border-top: 1px dashed var(--rose-light);
     border-bottom: 1px dashed var(--rose-light);
+    position: relative;
   }
 
   .value-bridge-label {
-    font-size: 0.75rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--ink-light);
-    margin-bottom: 0.75rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: var(--rose);
+    margin-bottom: 1.5rem;
     display: block;
   }
 
   .value-bridge-text {
     font-family: 'Noto Serif TC', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: clamp(1.4rem, 3.2vw, 2rem);
+    font-weight: 700;
     color: var(--ink);
     line-height: 1.6;
   }
 
   .value-bridge-text strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
     color: var(--rose);
-    font-weight: 900;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    position: relative;
+    padding: 0 0.1em;
+  }
+
+  .value-bridge-text strong::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--rose-pale);
+    z-index: -1;
+  }
+
+  .value-bridge-small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--ink-light);
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.05em;
   }
 
   @media (max-width: 600px) {
@@ -1959,8 +2003,8 @@
       </div>
 
       <div class="value-bridge reveal">
-        <span class="value-bridge-label">但是</span>
-        <p class="value-bridge-text">你不需要付 NTD 202,600。<br>第 1 屆早鳥價，只要 <strong>NTD 38,000</strong> 起。</p>
+        <span class="value-bridge-label">但是 —</span>
+        <p class="value-bridge-text">你不需要付 NTD 202,600<br>第 1 屆早鳥價，只要 <strong>NTD 38,000</strong> 起<span class="value-bridge-small">計畫限額 12 位 · 早鳥前 3 位</span></p>
       </div>
 
     </div>
