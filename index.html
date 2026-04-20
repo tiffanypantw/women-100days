@@ -966,6 +966,173 @@
     letter-spacing: 0.1em;
     color: var(--ink-light);
   }
+  /* ─── VALUE BREAKDOWN ─── */
+  .value-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .value-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .value-total-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .value-total-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .value-total-amount .currency {
+    font-size: 0.4em;
+    color: var(--rose);
+    font-weight: 400;
+    vertical-align: super;
+    margin-right: 0.3rem;
+  }
+
+  .value-total-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-light);
+  }
+
+  .value-list {
+    background: white;
+    border: 1px solid var(--rose-pale);
+    overflow: hidden;
+  }
+
+  .value-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 2rem;
+    border-bottom: 1px solid var(--rose-pale);
+    gap: 1.5rem;
+    transition: background 0.3s ease;
+  }
+
+  .value-item:last-child {
+    border-bottom: none;
+  }
+
+  .value-item:hover {
+    background: var(--paper);
+  }
+
+  .value-item-left {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .value-item-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--rose-light);
+    flex-shrink: 0;
+    width: 2rem;
+  }
+
+  .value-item-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .value-item-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+  }
+
+  .value-item-detail {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .value-item-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--ink);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .value-item-price .currency {
+    font-size: 0.7rem;
+    color: var(--ink-light);
+    margin-right: 0.3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .value-bridge {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top: 1px dashed var(--rose-light);
+    border-bottom: 1px dashed var(--rose-light);
+  }
+
+  .value-bridge-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .value-bridge-text {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .value-bridge-text strong {
+    color: var(--rose);
+    font-weight: 900;
+  }
+
+  @media (max-width: 600px) {
+    .value-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+    }
+    .value-item-left {
+      width: 100%;
+    }
+    .value-item-price {
+      padding-left: 3.2rem;
+      font-size: 1.15rem;
+    }
+  }
   /* ─── PRICING ─── */
   .pricing-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px;
@@ -1688,6 +1855,109 @@
         加入第 1 屆陪跑
       </a>
       <p class="testimonial-cta-note">計畫限額 12 位 · 早鳥價前 3 位</p>
+    </div>
+  </div>
+</section>
+<!-- ─── VALUE BREAKDOWN ─── -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="value-wrap">
+
+      <div class="value-header reveal">
+        <span class="section-eyebrow" style="display: block;">方案價值拆解</span>
+        <h2 class="section-title" style="margin-bottom: 2rem;">這 100 天的總價值</h2>
+        <div class="value-total-amount">
+          <span class="currency">NTD</span>202,600
+        </div>
+        <p class="value-total-note">— 每一份陪伴，都是真實的投入 —</p>
+      </div>
+
+      <div class="value-list reveal">
+
+        <div class="value-item">
+          <div class="value-item-left">
+            <span class="value-item-number">01</span>
+            <div class="value-item-content">
+              <div class="value-item-title">30–35 支預錄模組</div>
+              <div class="value-item-detail">每支 10–15 分鐘 · 隨時回看</div>
+            </div>
+          </div>
+          <div class="value-item-price"><span class="currency">NTD</span>41,600</div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item-left">
+            <span class="value-item-number">02</span>
+            <div class="value-item-content">
+              <div class="value-item-title">100 份每日語音陪伴</div>
+              <div class="value-item-detail">每支 5–8 分鐘 · 每天進步一點點</div>
+            </div>
+          </div>
+          <div class="value-item-price"><span class="currency">NTD</span>30,000</div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item-left">
+            <span class="value-item-number">03</span>
+            <div class="value-item-content">
+              <div class="value-item-title">社群直播 3 場</div>
+              <div class="value-item-detail">每場 2 小時 · 深度整合 & 解答</div>
+            </div>
+          </div>
+          <div class="value-item-price"><span class="currency">NTD</span>30,000</div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item-left">
+            <span class="value-item-number">04</span>
+            <div class="value-item-content">
+              <div class="value-item-title">線上實戰工作坊</div>
+              <div class="value-item-detail">開戶、下單、整合 · 跨過第一步</div>
+            </div>
+          </div>
+          <div class="value-item-price"><span class="currency">NTD</span>30,000</div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item-left">
+            <span class="value-item-number">05</span>
+            <div class="value-item-content">
+              <div class="value-item-title">一對一百日整合諮詢</div>
+              <div class="value-item-detail">百日尾聲 · 設計下一年方向</div>
+            </div>
+          </div>
+          <div class="value-item-price"><span class="currency">NTD</span>60,000</div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item-left">
+            <span class="value-item-number">06</span>
+            <div class="value-item-content">
+              <div class="value-item-title">六個階段完整工具包</div>
+              <div class="value-item-detail">財務報表、BMC、Ikigai 等 30+ 工具</div>
+            </div>
+          </div>
+          <div class="value-item-price"><span class="currency">NTD</span>5,000</div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item-left">
+            <span class="value-item-number">07</span>
+            <div class="value-item-content">
+              <div class="value-item-title">3 個月複盤期</div>
+              <div class="value-item-detail">結業後持續陪伴 · 讓成長不中斷</div>
+            </div>
+          </div>
+          <div class="value-item-price"><span class="currency">NTD</span>6,000</div>
+        </div>
+
+      </div>
+
+      <div class="value-bridge reveal">
+        <span class="value-bridge-label">但是</span>
+        <p class="value-bridge-text">你不需要付 NTD 202,600。<br>第 1 屆早鳥價，只要 <strong>NTD 38,000</strong> 起。</p>
+      </div>
+
     </div>
   </div>
 </section>
